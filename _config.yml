@@ -1,22 +1,22 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: Jane Choi 
+bio: Informatics, Informatics, Informatics! 
 
-# twitter summary info
-description: A blog about technology and stuff related
+# # twitter summary info
+# description: A blog with buch of TMI's 
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/ny2.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-external: false
+resume-url: assets/papers/JYC__CV.pdf
 
-url: https://sergiokopplin.github.io/indigo
+url: https://jaeyoung-jane-choi.github.io
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
@@ -29,28 +29,28 @@ permalink: /:title/
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+# disqus:
+#   shortname: mydisqus # enter this from your disqus account
+#   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-# instagram: myinstagram
+# facebook: myfacebook
+# twitter: mytwitter
+instagram: choi_jeng
 # pinterest: mypinterest
-# linkedin: mylinkedin
+linkedin: https://www.linkedin.com/in/jaeyoung-choi
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: jaeyoung-jane-choi
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+# medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: cjengy@gmail.com
 
 authors:
   johndoe:
