@@ -7,8 +7,7 @@ layout: page
 <p>I’m currently an undergraduate at Sungkyunkwan University in Seoul, South Korea. I have a B.A in Library and Information Science and a B.S in Data Analytics. </p>
 
 <p>I’m interested in informatics, machine learning, deep learning and natural language processing. 
-	My research goal is in adapting technical methods to practice digital humanities. 
-	Through my research, I wish to digitalize artifacts in innovative ways to bridge gaps between technology and history, literature, and other fields in humanities. </p>
+	My primary research interests revolve around adapting technical methods for and applying them todigital humanities practices.  More specifically, these interests entail unearthing innovative ways ofdigitizing artifacts and thereby bridging technology and various fields within the humanities (e.g., his-tory and literature).  </p>
 
 <h2>Skills</h2>
 
