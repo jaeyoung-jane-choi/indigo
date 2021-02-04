@@ -33,5 +33,5 @@ externalLink: false
 청소년들은 복합적인 요인들의 작용으로 가출에 대한 충동을 느끼고 있다. 이러한 가출의 예방을 위해서, 첫 가
 출이 발생하는 요인들을 분석하고자 했다. 다양한 체계 속 요인들이 가출에 미치는 영향력을 실증적으로 검증해
 보고자 ‘생존 분석을 이용한 청소년들의 가출과 그 첫 가출 시기에 미치는 요인 분석’을 진행해보았다. 
-[더 읽어보기](https://github.com/jaeyoung-jane-choi/papers/blob/main/생존분석.pdf)
+[더 읽어보기](https://github.com/jaeyoung-jane-choi/papers/blob/main/%EC%83%9D%EC%A1%B4%EB%B6%84%EC%84%9D.pdf)
 
