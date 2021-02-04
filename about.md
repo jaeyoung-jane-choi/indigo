@@ -29,7 +29,7 @@ layout: page
 <h2>Papers</h2>
 
 <ul>
-	<li><a href="https://github.com/jaeyoung-jane-choi/2020-Store-Sales-Analysis/blob/main/Paperwork/%5B서론%5D그래디언트부스팅모델을%20활용한%20상점%20매출%20예측%20모델(국내저널).pdf">[KR] Full Paper for Store Sales</a></li>
+	<li><a href="https://github.com/jaeyoung-jane-choi/papers/blob/main/Short_ENG_Store_sales_prediction.pdf">[EN] Full Paper for Store Sales</a></li>
 	<li><a href="https://github.com/jaeyoung-jane-choi/papers/blob/main/Mental%20Health%20and%20BMI.pdf">[EN] Short Paper for Effects of obesity in outpatient mental health treatment</a></li>
 
 
