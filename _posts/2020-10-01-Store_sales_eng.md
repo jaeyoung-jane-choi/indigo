@@ -26,4 +26,4 @@ We consider various missing data processing methods and utilize gradient boostin
 LightGBM, CatBoost to predict the future sales for individual stores. 
 As a result, we found that using simple median imputation with a XGBoost model has the best accuracy. 
 By employing the proposed method, stores which have low credibility but have high probability to compensate for repayment can benefit by receiving assistance beforehand,
-while Fintech enterprises can benefit by offering financial instruments to these stores.. [더 읽어보기](https://github.com/jaeyoung-jane-choi/papers/blob/main/Short_ENG_Store_sales_prediction.pdf) 
+while Fintech enterprises can benefit by offering financial instruments to these stores.. [read more](https://github.com/jaeyoung-jane-choi/papers/blob/main/Short_ENG_Store_sales_prediction.pdf) 
