@@ -30,6 +30,6 @@ layout: page
 <ul>
 	<li><a href="https://github.com/jaeyoung-jane-choi/papers/blob/main/Short_ENG_Store_sales_prediction.pdf">[EN] Full Paper for Store Sales</a></li>
 	<li><a href="https://github.com/jaeyoung-jane-choi/papers/blob/main/Mental%20Health%20and%20BMI.pdf">[EN] Short Paper for Effects of obesity in outpatient mental health treatment</a></li>
-
+	<li><a href="https://github.com/jaeyoung-jane-choi/2020-CodeepLearning-Recommendation-System/blob/main/paperwork/2020_co_deep_learning_final_paper.pdf">[KR] Long Paper for Recommendation System of school library</a></li>
 
 </ul>
