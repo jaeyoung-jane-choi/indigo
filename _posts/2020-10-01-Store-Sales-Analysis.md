@@ -27,4 +27,4 @@ LightGBM, CatBoost를 사용하여 각 모델의 상점 매출 예측 성능을 
 값 대체법을 사용한 데이터셋에 XGBoost를 활용하여 예측을 진행한 모델의 성능이 가장 우수했다. 연구를 통
 해 얻은 모델을 이용하여 상점의 매출 예측을 진행함으로서 핀테크 기업의 고객 상점들은 대출금을 상환하기
 전 금융 보조를 받는 근거로, 핀테크 기업은 상환 가능성이 높은 우수 상점에 금융 상품을 제공하는 등 기업과
-고객 모두에게 긍정적인 방향으로 활용할 수 있다. [더 읽어보기](https://github.com/jaeyoung-jane-choi/2020-Store-Sales-Analysis/blob/main/Paperwork/%5B서론%5D그래디언트부스팅모델을%20활용한%20상점%20매출%20예측%20모델(국내저널).pdf)
+고객 모두에게 긍정적인 방향으로 활용할 수 있다. [더 읽어보기](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiJjYys9_fvAhUIwZQKHYKJDtkQFjAAegQIAxAD&url=https%3A%2F%2Fwww.kci.go.kr%2Fkciportal%2Fci%2FsereArticleSearch%2FciSereArtiView.kci%3FsereArticleSearchBean.artiId%3DART002685871&usg=AOvVaw18LBSkm7GesCj22iOfS_qR)
