@@ -6,7 +6,7 @@ layout: page
 
 <p>I’m currently an undergraduate at Sungkyunkwan University in Seoul, South Korea. I have a B.A in Library and Information Science and a B.S in Data Analytics. </p>
 
-<p>I’m interested in informatics, machine learning, deep learning and natural language processing. </p>
+<p>I’m interested in machine learning, deep learning, recommendation systems and natural language processing. </p>
 
 <h2>Skills</h2>
 
