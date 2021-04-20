@@ -1,6 +1,6 @@
 # main text of home
 name: Jane Choi 
-bio: Bridging technology and Humanities 
+bio: 
 
 # # twitter summary info
 # description: A blog with buch of TMI's 
@@ -8,13 +8,13 @@ bio: Bridging technology and Humanities
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/ny2.jpg
+picture: assets/images/lake.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: false
-resume-url: assets/papers/JYC__CV.pdf
+resume-url: assets/papers/JaeyoungChoi_CV.pdf
 
 url: https://jaeyoung-jane-choi.github.io
 # your url: https://USERNAME.github.io
