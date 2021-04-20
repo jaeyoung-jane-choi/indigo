@@ -1,5 +1,5 @@
 ---
-title: "[KR] 그래디언트 부스팅 모델을 활용한 상점 매출 예측 모델"
+title: "[KR] 그래디언트 부스팅 모델을 활용한 상점 매출 예측"
 layout: post
 date: 2020-10-01 
 tag: 
@@ -27,4 +27,4 @@ LightGBM, CatBoost를 사용하여 각 모델의 상점 매출 예측 성능을 
 값 대체법을 사용한 데이터셋에 XGBoost를 활용하여 예측을 진행한 모델의 성능이 가장 우수했다. 연구를 통
 해 얻은 모델을 이용하여 상점의 매출 예측을 진행함으로서 핀테크 기업의 고객 상점들은 대출금을 상환하기
 전 금융 보조를 받는 근거로, 핀테크 기업은 상환 가능성이 높은 우수 상점에 금융 상품을 제공하는 등 기업과
-고객 모두에게 긍정적인 방향으로 활용할 수 있다. [더 읽어보기](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiJjYys9_fvAhUIwZQKHYKJDtkQFjAAegQIAxAD&url=https%3A%2F%2Fwww.kci.go.kr%2Fkciportal%2Fci%2FsereArticleSearch%2FciSereArtiView.kci%3FsereArticleSearchBean.artiId%3DART002685871&usg=AOvVaw18LBSkm7GesCj22iOfS_qR)
+고객 모두에게 긍정적인 방향으로 활용할 수 있다. [한국정보통신학회논문지에서 더 읽어보기](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002685871)
