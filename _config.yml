@@ -142,3 +142,10 @@ exclude:
     "node_modules",
     "vendor",
   ]
+  
+  # Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
