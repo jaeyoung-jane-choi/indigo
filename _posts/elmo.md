@@ -1,0 +1,205 @@
+---
+title: "NLP: Deep contextualized word representations (KR)"
+layout: post
+date: 2021-04-10
+image: https://media.vlpt.us/images/skm0626/post/2dfd2cd6-a6d2-4c06-bc08-b6b4b20553c1/15-158093_wiki-elmo-and-dorothy-clip-art-photos-src.jpg
+headerImage: false 
+tag:
+
+- ELMO 
+- NLP
+
+category: blog
+author: Jane Choi
+description: Summarization of Deep contextualized word representations
+
+---
+
+## [Paper Review] Deep contextualized word representations (ELMO)
+
+---------------------------------------
+<img src= "https://media.vlpt.us/images/skm0626/post/2dfd2cd6-a6d2-4c06-bc08-b6b4b20553c1/15-158093_wiki-elmo-and-dorothy-clip-art-photos-src.jpg" title="10" alt="elmo">
+
+[_Link to paper : "Deep contextualized word representations"_][elmo]
+
+[elmo]:https://arxiv.org/pdf/1802.05365.pdf "ELMO"
+
+
+
+> ## **Abstract** 
+
+이 논문은 새로운 타입의 "Deep Contextualized Word Representation"을 소개한다. 이것의 핵심은 word vector를 큰 말뭉치로 학습된 "Deep bidirectional language model(biLM)의 internal states(내부 상태)로부터 획득한다는 것이다. 
+
+
+--------------------------------------
+
+> ## **Introduction** 
+
+#### Understanding word representation 
+
+Neural language understanding model ; 즉 NLU 모델에서는 pre-trained word representatation(사전 학습된 단어 벡터)가 중요한 요소이다. 이 word representation은 두 가지 목적을 달성해야 이상적이다. 
+
+- model complex characteristics of word use (syntax and semantics)
+
+- model how these uses vary across linguistic contexts(model polysemy)
+
+첫번째는 단어의 복잡한 목적에 대한 모델링이 가능해야 한다는 점이다. 즉, 구문 또는 문법(sytax)과 의미(semantics)를 표현할 수 있어야 좋은 word representation이라고 할 수 있다. 
+
+두번째는 이 단어 목적들을 다양한 문맥(context)에서 모델링이 가능해야한다는 것이다. 즉, 다의성(polysemy)를 이해(?)해야 한다는 점이다. 
+
+정리하자면, word representation은 각 단어들을 잘~ 이해해야한다는 것이다. 문법적으로도, 의미적으로도 제대로 표현하고, 다양한 문맥들 사이에서의 차이도 캐치해야한다는 것이다. 
+
+이 두가지 목적을 달성하기 위해, 이 논문에서는 새로운 방법의 deep contextualized word
+ representation 을 소개한다.  
+
+#### Difference with traditional word representations  
+
+이 논문에서 소개되는 word embedding(word representation) 은 각 token이  _전체 input sentence (입력 문장)을 내포하는 function_ 으로서 표현된다는 점이다. 간단하게 설명하면, 각 token은 전체 입력 문장을 보고 있는 것이다. 
+
+이 때의 embedding 값은 대규모 말뭉치에서 language model(LM)의 몇 개의 objective(목적)으로 훈련된 bidirectional LSTM의 vector들에서 구한다. 이러한 이유로, 이 방식을 통해 만들어진 word representation을 ELMO(Embeddings from Language Models)라고 부른다.
+
+
+#### Pros of ELMO 
+
+ELMO의 장점은 deep하다는 것이다. bidirectional LSTM(biLM)의 최종 Layer만을 사용하지 않고, 모든 layer(층)을 linear comination(가중 합)해서 각 단어의 word embedding을 추출한다. 이는 최종 층만을 사용하는 것보다 월등한 performance를 기록한다고 한다. 
+
+#### Additional information 
+
+실헙 결과, higher level(출력과 가까운 층)의 LSTM 상태는 context(문맥적인 정보: 의미)를, lower level(입력과 가까운 층)의 상태는 syntax(구문적인 특징: 문법)를 잘 캐치한다고 한다. 
+
+이후의 내용은, 엘모의 뛰어난 성능에 대한 기술이다! 
+
+
+> ## **Related Work** 
+
+
+#### Previous Approach and ELMo's Approach
+
+이전의 pretrained word vectors는 다의적인 의미를 내포하지 못한다는 단점이 있었다. 즉, 차(tea)와 차(car)은 같은 벡터로서 표현된다는 점이다. 문맥적인(context) 접근이 부족한 것이다. 
+
+이를 극복하기 위해, subword information를 활용하거나 각 단어마다 다르게 벡터를 훈련하는 방법(즉, 차를 2개로 구분해서 학습)이 제안되었다. 
+
+_ELMo는 두 방식 중 subword의 장점을 활용한다. ELMo는 character convolution을 통해 subword을 활용해 다의적인 정보를 내포한다._
+
+최근 연구 또한 문맥(contex)을 이해하기 위해 집중한다. context2vec는 bi-LSTM(양방향 lstm) 구조를 이용해 주요 단어 주변의 context를 이해한다. CoVe 또한, 문맥 임베딩을 이해하기 위해, pivot word 를 인코더에 포함하는 방식으로 구성된다. 이때 지도학습의 일종으로 neural machine translation(MT)로 학습되기도 하고, 비지도학습의 language model 형태로도 학습되기도 한다. MT의 과제는, 평행되는 동등한 코퍼스가 필요하다.(번역이니까!)
+
+_ELMo는 monolingual(단일 언어)의 대량 코퍼스를 사용해, biLSTM을 학습한 다음, 다양한 task를 통해 일반화했다._
+
+이전 연구들에 따르면, deep biRNN의 다양한 층(layer)이 다른 타입의 정보를 내포한다고 한다. 예를 들면, syntactic supervision(POS tag)을 deep LSTM의 lower level(입력과 가까운 층)에 대입해, higher level task(더 고위 과제)인 dependency parsing 이나 CCG super tagging의 성능을 향상시켰다는 연구가 있다. 또다른 예시로는, RNN-based encoder-decoder machine translation system의 첫번째 레이어가 두번째 레이어의 representation이 POS에 더 좋은 성능을 띄는 연구가 있다. 마지막으로, LSTM의 top layer(출력층에 가까운 층)이 문맥을 이해하는다는 것을 증명하는 연구가 있다. 결론적으로, 하위 계층(입력에 가까운 층)은 단어의 문법적인 측면을, 상위 계층(출력과 가까운 층)은 단어의 문맥적인 측면을 이해한다는 것이다. 
+
+_ELMo는 서로 다른 LM 학습 목적에 따라 층(layer)별로 정보가 다르게 내포된다. 그래서 위에서 소개된 연구들을 근거로, 기존의 task뿐만 아니라 downstream task(fine-tune task)의 층 정보를 섞는다면 더 좋은 성능(beneficial)을 띌 것이다!_
+
+한 연구에서는, encoder-decoder pair을 language model, sequence autoencoder을 이용해 pretrain을 한다음, 이를 개별 task로 fine-tune(미세조정)한다.
+
+_ELMo는 biLM을 unlabeled data(레이블이 없는 데이터)로 pretrain(사전 학습)한 다음 weight를 고정한 다음 개별 task 과제를 추가하는 방식으로 진행한다. 이를 통해, 우리는 biLM의 풍부한 representation 정보를 언제든 이용할 수 있다.(개별 과제의 데이터가 작은 경우에도!)_ 
+
+> ## **ELMo: Embeddings from Language Models** 
+
+
+#### ELMo's difference from other word embeddings 
+
+ELMo의 경우, 전체 입력 문장의 정보의 함수(내포)라는 점에서 전통적인(traditional) 단어 임베딩 접근과 다르다. 이 함수는 2개의 biLM 층의 글자수준 합성곱(character convolution)의/ 선형함수(가중합)으로 계산된다. 이러한 계산법에 의해, semi-supervised learning(준지도 학습)으로 사전학습이 가능해지며, 이후 다양한 NLP task에 쉽게 적용 가능하도록 한다. 
+
+
+### 3.1 Bidirectional language models 
+
+#### What is BiLM? 
+
+Forward Language model와 Backward Language model이 합쳐진 Bidirectional language model은 ELMo의 특별한 접근법이다. 우선 Forward LM은 $N$개의 token으로 구성된 문장이 주어졌을 때, $t_k$ 의 등장 확률을 이전의 history로 구한다. 즉, 아래의 수식을 통해 구할 수 있다. 
+$$p(t_1, t_2, ..., t_N) = \prod_{k=1}^N p(t_k \vert t_1, t_2, ..., t_{k-1})$$ 
+
+최근 LM은 문맥 독립적인 token representation $x_k^{NM}$ 를 forward LSTM 레이어에 통과시킨다. 이때 각 $k$ 위치에서 문맥 의존적인 token representation $\overrightarrow{h}_{k, j}^{LM}(j = 1, …, L)$ 을 output한다. 결국, LSTM의 최상위 $L$ 레이어의 output; 즉 $\overrightarrow{h}_{k, L}^{LM}$ 은 다음 token $t_{k+1}$ 를 softmax layer을 통해 예측한다. ELMo 또한 사전 훈련된 embedding을 사용하지 않고, CNN을 통해 만들어진 context independent character embeddings을 input으로 사용한다 . 
+
+Backward LM 또한 forward LM과 동일한 과정을 통해 진행되나, sequence(문장)의 방향이 반대가 된다. 결국 아래의 수식처럼, 이전 token을 예측하는 방식인 셈이다. 
+$$p(t_1, t_2, ..., t_N) = \prod_{k=1}^N p(t_k \vert t_{k+1}, t_{k+2}, ..., t_N)$$ 
+
+결국, BiLM은 이 둘을 결합해 로그우도를 최대화한다. 
+
+$$\sum_{k=1}^N \Big( \log \ p(t_k \vert t_1, ..., t_{k-1}; \Theta_x, \overrightarrow{\Theta}_{LSTM}, \Theta_s) + \log \ p(t_k \vert t_{k+1}, ..., t_N; \Theta_x, \overleftarrow{\Theta}_{LSTM}, \Theta_s) \Big)$$
+
+$$(\Theta_x = token \space representation , \Theta_s = softmax \space layer , \Theta_{LSTM} = lstm  \space layer)$$
+
+$\Theta_x, \Theta_s$의 경우, forward이든, backward이든 고정된 parameter을 가지나, $\Theta_{LSTM}$ 의 파라미터는 방향에 따라 서로 다른 값을 지닌다. 
+
+_ELMo는 이전 모델과의 구별점은 forward & backward 에서 일부의 parameter(weight)을 공유한다는 것이다._
+
+
+### 3.2 ELMo
+
+ELMo는 각 레이어의 representation을 결합하는 방식으로 진행된다. 
+
+$$R_k = \{ x_k^{LM}, \overrightarrow{h}_{k, j}^{LM}, \overleftarrow{h}_{k, j}^{LM} \vert j = 1, ..., L \} = \{ h_{k, j}^{LM} \vert j = 0, ..., L \}$$ 
+
+$$h_{k, 0}^{LM}: \text{token layer}, h_{k, j}^{LM} = [\overrightarrow{h}_{k, j}^{LM}; \overleftarrow{h}_{k, j}^{LM}]$$ 
+
+즉, token layer의 representation과 forward, backward 레이어의 representation 출력값을 붙여준다는 것이다.  
+
+
+$$\text{ELMo}_k^{task} = E(R_k; \Theta^{task}) = \gamma^{task} \sum_{j=0}^L s_j^{task} h_{k, j}^{LM}$$ 
+
+이때, $s^{task}$는 $softmax$을 통해 정규화된 가중치를 곱해주어, 각 레이어의 벡터를 하나의 벡터로 합한다. 마지막으로, 전체 ELMo 벡터의 크기를 조절하는 역할의 $r^{task}$를 곱한다.
+
+_이 부분은 마지막 부분의 Summary에서 자세히 설명했습니다!_
+
+
+### 3.3 Using biLMs for supervised NLP tasks 
+
+Pre-trained biLM 또는 지도학습의 NLP task가 존재하는 경우, 모델 성능을 높이기 위해 elmo는 쉽게 이용될 수 있다. BiLM를 통해 각 단어의 representation을 layer별로 구하고 end task가 이 representation들의 linear combination(선형결합)을 배우게 한다. 
+
+Supervised 모델에 elmo embedding을 추가할 수도 있다. biLM의 weight를 freeze한 다음, $\text{ELMo}_k^{task}$와 기존의 $x_k$을 concatenate해, $[x_k; \text{ELMo}_k^{task}]$를 enhanced 된 representation으로 사용하는 것이다. 
+
+### 3.4 Pre-trained bidirectional language model architecture 
+
+이전 LM 모델들과의 차별점은, 양방향 학습이 동시에 가능하며, LSTM 레이어간 residual connection을 추가했다는 것이다. 
+
+
+> ## **Evaluation** 
+
+6가지 NLP task에서 ELMo representation만을 추가했더니 에러율이 6~20% 감소했다. 
+
+
+
+> ## **Summary of ELMo Representation**
+
+논문을 통해서만 Elmo를 이해하는데애 어려운 부분을 다시 정리합니다. 정말 잘 설명해주신 분들의 링크 및 정보를 이용했습니다. 저에게 많은 도움이 되었어요! 
+
+[허민석님께서 설명해주시는 ELMo 영상](https://www.youtube.com/watch?v=YZerhaFMPTw) , [딥러닝을 활용한 자연어처리 입문](https://wikidocs.net/33930)
+
+
+ELMo를 좋은 그림을 통해 재-설명을 하면, 아래의 상황인 것이다. 그림처럼 각 단어들은 초기 character embedding 부터, forward & backward lstm 레이어의 출력값들이 있다. 
+
+<img src = 'https://wikidocs.net/images/page/33930/playwordvector.PNG'>
+
+*그림 출처: 딥러닝을 활용한 자연어처리 입문* 
+
+이때, ELMo는 아래의 방식으로 임베딩 값을 산출하다. (play라는 단어의 임베딩을 구한다고 하자)
+
+1. 초기 레이어와 각 레이어의 출력값을 층별로 concatenate 한다.  
+
+<img src = 'https://wikidocs.net/images/page/33930/concatenate.PNG'> 
+
+*그림 출처: 딥러닝을 활용한 자연어처리 입문* 
+
+2. 각 층에 가중치 $s$를 곱한다. 이 가중치는 각 층의 softmax 로 정규화된 가중치이다. 
+
+<img src = 'https://wikidocs.net/images/page/33930/weight.PNG'>
+
+*그림 출처: 딥러닝을 활용한 자연어처리 입문* 
+
+
+3. 각 층의 출력값을 하나의 벡터로 합한다. 
+
+<img src = 'https://wikidocs.net/images/page/33930/weightedsum.PNG'>
+
+*그림 출처: 딥러닝을 활용한 자연어처리 입문* 
+
+
+4. $r$를 곱한다. 이때 $r$는 스칼라로 벡터의 크기를 결정한다. 
+
+<img src = 'https://wikidocs.net/images/page/33930/scalarparameter.PNG'>
+
+*그림 출처: 딥러닝을 활용한 자연어처리 입문* 
+
+
+**이런 과정을 통해 완성된 벡터를 ELMo 표현(representation)이라고 한다!** 
+
