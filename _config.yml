@@ -115,6 +115,13 @@ defaults:
       # can be overridden in the front matter for a specific post
       hidden: false
 
+  
+ # Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
@@ -142,10 +149,3 @@ exclude:
     "node_modules",
     "vendor",
   ]
-  
-  # Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
