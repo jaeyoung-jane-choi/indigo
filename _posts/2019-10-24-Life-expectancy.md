@@ -5,8 +5,7 @@ date: 2019-10-24
 tag: 
 
 - R 
-- exploratory_data_analysis 
-- eda
+
 
 image: https://cdn.pixabay.com/photo/2014/12/10/20/48/medic-563423_1280.jpg
 
