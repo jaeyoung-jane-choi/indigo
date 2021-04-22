@@ -4,7 +4,7 @@ layout: post
 date: 2020-07-01 
 tag: 
  
-- Python
+- python
 
 
 image: https://cdn.pixabay.com/photo/2014/12/10/20/48/medic-563423_1280.jpg
