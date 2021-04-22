@@ -5,7 +5,7 @@ date: 2019-12-16
 tag: 
 
 - R 
-- healthinformatics 
+
 
 image: https://cdn.pixabay.com/photo/2014/12/10/20/48/medic-563423_1280.jpg
 
