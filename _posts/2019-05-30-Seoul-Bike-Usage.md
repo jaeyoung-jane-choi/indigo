@@ -5,7 +5,7 @@ date: 2019-05-30
 tag: 
 
 - R 
-- Python
+- python
 
 
 image: https://cdn.pixabay.com/photo/2014/12/10/20/48/medic-563423_1280.jpg
