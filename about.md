@@ -22,9 +22,9 @@ Specifically, I am fascinated with the underlying concept of embeddings for nlp,
 <h2>Papers</h2>
 
 <ul>
-	<li><A href = "https://ai-informetrics.github.io/papers/paper2.pdf">[EN]Short Paper for Embedding-based Neural Network Models for Book Recommendation in University Libraries</a></li> 
-	<li><a href="2021-06-30-JKOSIM.md">[KR] A Study on the Development and Evaluation of Personalized Book Recommendation Systems in University Libraries Based on Individual Loan Records </a></li>
-	<li><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002685871">[KR] Short Paper for Store Sales Prediction Using Gradient Boosting Model</a></li> 
+	<li><A href = "https://ai-informetrics.github.io/papers/paper2.pdf">[EN] Paper for Embedding-based Neural Network Models for Book Recommendation in University Libraries</a></li> 
+	<li><a href="2021-06-30-JKOSIM.md">[KR] Paper for A Study on the Development and Evaluation of Personalized Book Recommendation Systems in University Libraries Based on Individual Loan Records </a></li>
+	<li><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002685871">[KR] Paper for Store Sales Prediction Using Gradient Boosting Model</a></li> 
 
 
 </ul>
